@@ -74,7 +74,25 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
-  // Add your code here!
+
+  $(document).ready(function(){
+    console.log(`Let's get ready to party with jQuery!`);
+  });
+  $(`article img`).addClass(`image-center`);
+  $(`p`).eq(5).remove();
+  $(`#title`).css(`font-size`, `${Math.floor(Math.random()*101)}px`);
+  $('ol').append(`<li>This is the 5th item in the list!</li>`);
+  $(`aside`).empty().append(`<p>Apologies - the list was silly so I deleted it.</p>`);
+  $(`input`).change(function(){
+    let input1 = $('input').eq(0).val();
+    let input2 = $('input').eq(1).val();
+    let input3 = $('input').eq(2).val();
+    $(`body`).css(`background-color`, `rgb(${input1},${input2},${input3})`);
+  });
+  $(`img`).on(`click`, function(){
+    $(this).remove();
+  });
+  
 </script>
 </body>
 
